@@ -11,11 +11,12 @@ import {
   IconMoon,
   IconLightMode,
 } from "./NavBar.style.js";
-import { RxTextAlignLeft } from "react-icons/rx";
+import { RxTextAlignLeft, RxTextAlignRight } from "react-icons/rx";
 
 function Navbar() {
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(true);
   const [mode, setMode] = useState("light");
+  const [menu, setMenu] = useState("menu");
   const closeNavItems = () => {
     setShowNav(!showNav);
   };
@@ -23,12 +24,20 @@ function Navbar() {
     setMode(mode === "light" ? "dark" : "light");
   };
 
+  const toggleMenu = () => {
+    setMenu(menu === "close" ? "open" : "close");
+  };
+
   return (
     <NavBar>
       <Container>
         <Logo>IA</Logo>
         <MenuIcon onClick={closeNavItems}>
-          <RxTextAlignLeft size={38} />
+          {menu === "close" ? (
+            <RxTextAlignLeft size={38} onClick={toggleMenu} />
+          ) : (
+            <RxTextAlignRight size={38} onClick={toggleMenu} />
+          )}
         </MenuIcon>
         <NavElements
           display={showNav.toString()}
