@@ -6,7 +6,7 @@ const PlusIcon = styled.div`
   position: absolute;
   width: 88px;
   height: 88px;
-  left: 523px;
+  left: 590px;
   top: 90px;
   font-family: "Roboto";
   font-style: normal;

@@ -5,7 +5,7 @@ export const CardLayout = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 1158px;
+  width: 1300px;
   height: 507px;
   background: linear-gradient(
     146.64deg,
@@ -16,13 +16,16 @@ export const CardLayout = styled.div`
   z-index: 2;
   backdrop-filter: blur(10px);
   border-radius: 200px 0px;
-  left: 200px;
+  left: 250px;
   top: 200px;
-  @media (max-width: ${breakpoints.md}) {
-    width: 590px;
-    height: 845px;
-    left: 77px;
-    top: 969px;
+  @media (max-width: ${breakpoints.xxxl}) {
+    width: 1100px;
+    height: 450px;
+  }
+  @media (max-width: ${breakpoints.xxl}) {
+    height: 450px;
+    width: 900px;
+    left: 115px;
   }
 `;
 
@@ -65,6 +68,9 @@ export const H2 = styled.h2`
   align-items: center;
   color: #393939;
   text-align: start;
+  @media (max-width: ${breakpoints.xxl}) {
+    margin: 10px;
+  }
 `;
 export const StyledParagraph = styled.p`
   font-family: "Roboto";

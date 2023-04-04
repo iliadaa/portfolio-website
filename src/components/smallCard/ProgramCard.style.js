@@ -1,15 +1,22 @@
 import styled from "styled-components";
-
+import breakpoints from "../../config/breakpoints";
 export const CardLayout = styled.div`
   position: absolute;
   width: 161px;
   height: 91px;
-  left: 501px;
-  top: 776px;
+  left: 600px;
+  top: 800px;
   z-index: 2;
   background: #a6bcfa;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
   border-radius: 24px;
+  @media (max-width: ${breakpoints.xxl}) {
+    left: 350px;
+    top: 720px;
+  }
+  @media (max-width: ${breakpoints.xxxl}) {
+    top: 740px;
+  }
 `;
 
 export const CardLabel = styled.label`

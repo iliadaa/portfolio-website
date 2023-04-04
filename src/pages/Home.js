@@ -16,9 +16,9 @@ function Home() {
       <Ellipse />
 
       <ProgramCards />
-      <ProgramCards left="700px" />
-      <ProgramCards left="900px" />
-      <ProgramCards left="1100px" />
+      <ProgramCards left="800px" />
+      <ProgramCards left="1000px" />
+      <ProgramCards left="1200px" />
     </>
   );
 }
