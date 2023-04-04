@@ -4,11 +4,11 @@ import { colors } from "../../config/colors";
 import breakpoints from "../../config/breakpoints";
 import { FaMoon } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
+
+
 export const NavBar = styled.nav`
-  height: 60px;
   background-color: ${colors.white};
-  position: sticky;
-  top: 0;
+  z-index: 1;
 `;
 
 export const Container = styled.div`
@@ -17,18 +17,29 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  position: relative;
+  z-index: 2;
+  top: 33px;
+  margin-right: 5%;
+  @media (max-width: ${breakpoints.md}) {
+    top: 0;
+    margin-right: 0;
+  }
 `;
 export const Logo = styled.div`
   color: ${colors.navColor};
   font-size: 26px;
   font-family: "Roboto";
+  margin-left: 5%;
 `;
+
 export const NavElements = styled.div`
   @media (max-width: ${breakpoints.md}) {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: ${colors.lightSilver};
+    background: ${colors.white};
+    box-shadow: 0px 0px 18px ${colors.lightSilver};
     height: 100vh;
     transition: all 0.3s ease-in;
     overflow: hidden;
@@ -84,6 +95,7 @@ export const MenuIcon = styled.div`
     cursor: pointer;
     color: ${colors.navColor};
     z-index: 4;
+    margin-right: 5%;
   }
 `;
 export const IconMoon = styled(FaMoon)`

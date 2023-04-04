@@ -31,7 +31,7 @@ function Navbar() {
   return (
     <NavBar>
       <Container>
-        <Logo>IA</Logo>
+        <Logo>Iliada Arapi</Logo>
         <MenuIcon onClick={closeNavItems}>
           {menu === "close" ? (
             <RxTextAlignLeft size={38} onClick={toggleMenu} />
@@ -57,7 +57,7 @@ function Navbar() {
 
             <MenuLink>
               <NavLink
-                to="/"
+                to="/about"
                 aria-current="page"
                 className="active"
                 onClick={closeNavItems}
@@ -67,7 +67,7 @@ function Navbar() {
             </MenuLink>
             <MenuLink>
               <NavLink
-                to="/"
+                to="/projects"
                 aria-current="page"
                 className="active"
                 onClick={closeNavItems}
