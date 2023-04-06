@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../config/colors";
-
+import breakpoints from "../../../config/breakpoints";
 export const GenericButtonStyle = styled.button`
   display: flex;
   justify-content: center;
@@ -18,6 +18,20 @@ export const GenericButtonStyle = styled.button`
   line-height: 22px;
   font-style: normal;
   cursor: ${(props) => props.cursor};
+
+  @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxxl}) {
+    width: 200px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.xl}) {
+    width: 155px;
+  }
+  @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+    width: 180px;
+  }
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    width: 200px;
+  }
 `;
 
 export const IconContainer = styled.div`

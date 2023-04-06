@@ -63,10 +63,10 @@ export const ImageContainer = styled.div`
     height: 260px;
     border: 15px solid #ffffff;
   }
-  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+  /* @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
     width: 300px;
     height: 300px;
-  }
+  } */
 `;
 
 export const ImageProfile = styled.img`
@@ -160,5 +160,10 @@ export const ButtonContainer = styled.div`
   }
   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
     padding-top: 0;
+    padding-right: 0;
+  }
+  @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
+    padding-top: 0;
+    padding-right: 0;
   }
 `;

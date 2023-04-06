@@ -31,7 +31,6 @@ function GenericCard() {
               name={"See Projects"}
               icon={<BsArrowRight size={25} />}
               buttonHeight="54px"
-              buttonWidth="140px"
               borderRadius="20px"
               fontFamily="Roboto"
               fontStyle="normal"
@@ -45,7 +44,6 @@ function GenericCard() {
             <GenericButton
               name="Download Resume"
               buttonHeight="54px"
-              buttonWidth="140px"
               borderRadius="20px"
               fontFamily="Roboto"
               fontStyle="normal"
