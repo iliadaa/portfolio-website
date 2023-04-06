@@ -19,12 +19,26 @@ const PlusIcon = styled.div`
     content: "+";
     transform: rotate(-45deg);
   }
-  z-index: 2;
+
   @media (max-width: ${breakpoints.md}) {
-    left: 115px;
-    top: 50px;
-    line-height: 170px;
-    z-index: 1;
+    left: 485px;
+    top: 30px;
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    left: 325px;
+    top: 77px;
+  }
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    left: 420px;
+    top: 88px;
+  }
+  @media (max-width: ${breakpoints.xs}) {
+    top: 60px;
+    left: 235px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    left: 275px;
   }
 `;
 

@@ -13,7 +13,7 @@ export const GenericButtonStyle = styled.button`
   border-radius: ${(props) => props.borderRadius};
   text-decoration: none;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 22px;
   font-style: normal;
@@ -24,5 +24,5 @@ export const IconContainer = styled.div`
   color: ${(props) => props.color};
   display: flex;
   align-items: center;
-  grid-gap: 15px;
+  grid-gap: 5px;
 `;

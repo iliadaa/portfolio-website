@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Container,
   MenuLink,
@@ -14,73 +14,71 @@ import {
 import { RxTextAlignLeft, RxTextAlignRight } from "react-icons/rx";
 
 function Navbar() {
-  const [showNav, setShowNav] = useState(true);
   const [mode, setMode] = useState("light");
-  const [menu, setMenu] = useState("menu");
-  const closeNavItems = () => {
-    setShowNav(!showNav);
-  };
+  const [menu, setMenu] = useState(false);
+  const menuRef = useRef();
+
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light");
   };
 
-  const toggleMenu = () => {
-    setMenu(menu === "close" ? "open" : "close");
-  };
+  useEffect(() => {
+    const toggleMenu = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", toggleMenu);
+    return () => {
+      document.removeEventListener("mousedown", toggleMenu);
+    };
+  }, []);
 
   return (
     <NavBar>
       <Container>
         <Logo>Iliada Arapi</Logo>
-        <MenuIcon onClick={closeNavItems}>
-          {menu === "close" ? (
-            <RxTextAlignLeft size={38} onClick={toggleMenu} />
+        <MenuIcon
+          onClick={() => {
+            setMenu(!menu);
+          }}
+        >
+          {menu ? (
+            <RxTextAlignLeft
+              size={38}
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            />
           ) : (
-            <RxTextAlignRight size={38} onClick={toggleMenu} />
+            <RxTextAlignRight
+              size={38}
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            />
           )}
         </MenuIcon>
-        <NavElements
-          display={showNav.toString()}
-          className={`${showNav && "active"}`}
-        >
+        <NavElements className={menu ? " " : "hiden"} ref={menuRef}>
           <UnorderedList>
             <MenuLink>
-              <NavLink
-                to="/"
-                aria-current="page"
-                className="active"
-                onClick={closeNavItems}
-              >
+              <NavLink to="/" aria-current="page" className="active">
                 Home
               </NavLink>
             </MenuLink>
 
             <MenuLink>
-              <NavLink
-                to="/about"
-                aria-current="page"
-                className="active"
-                onClick={closeNavItems}
-              >
+              <NavLink to="/about" aria-current="page" className="active">
                 About
               </NavLink>
             </MenuLink>
             <MenuLink>
-              <NavLink
-                to="/projects"
-                aria-current="page"
-                className="active"
-                onClick={closeNavItems}
-              >
+              <NavLink to="/projects" aria-current="page" className="active">
                 Projects
               </NavLink>
             </MenuLink>
             <MenuLink>
-              <NavLink
-                aria-current="page"
-                onClick={closeNavItems}
-                className="active"
-              >
+              <NavLink aria-current="page" className="active">
                 Content
               </NavLink>
             </MenuLink>

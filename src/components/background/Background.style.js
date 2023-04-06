@@ -24,8 +24,15 @@ export const BackgroundContainer = styled.div`
   @media (max-width: ${breakpoints.xxl}) {
     background: linear-gradient(
       to right,
-      ${colors.BabyBlue} 23%,
-      ${colors.white} 23%
+      ${colors.BabyBlue} 53%,
+      ${colors.white} 53%
+    );
+  }
+  @media (max-width: ${breakpoints.xs}) {
+    background: linear-gradient(
+      to right,
+      rgb(166, 188, 250) 53%,
+      rgb(255, 255, 255) 53%
     );
   }
 `;

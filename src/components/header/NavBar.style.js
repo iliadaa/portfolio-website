@@ -7,8 +7,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 
 
 export const NavBar = styled.nav`
-  background-color: ${colors.white};
-  z-index: 1;
+
 `;
 
 export const Container = styled.div`
@@ -45,7 +44,7 @@ export const NavElements = styled.div`
     overflow: hidden;
     z-index: 2;
     width: 200px;
-    &.active {
+    &.hiden {
       width: 200px;
       display: none;
     }
