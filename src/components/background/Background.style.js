@@ -13,7 +13,6 @@ export const BackgroundContainer = styled.div`
     ${colors.LighBColor} 0%,
     ${colors.DarkBColor} 100%
   );
-  z-index: 1;
   @media (max-width: ${breakpoints.md}) {
     background: linear-gradient(
       to right,

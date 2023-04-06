@@ -12,6 +12,7 @@ import imageProfile from "../../assets/image/IMG_4224.PNG";
 import GenericButton from "../genericButton/genericButton/GenericButton";
 import { colors } from "../../config/colors";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function GenericCard() {
   return (
     <>
@@ -27,20 +28,23 @@ function GenericCard() {
             pellentesque augue, vel molestie lectus nisi id ipsum.
           </StyledParagraph>
           <ButtonContainer>
-            <GenericButton
-              name={"See Projects"}
-              icon={<BsArrowRight size={25} />}
-              buttonHeight="54px"
-              borderRadius="20px"
-              fontFamily="Roboto"
-              fontStyle="normal"
-              fontWeight=" 600"
-              fontSize="15px"
-              lineHeight="22px"
-              backgroundColor={colors.blue}
-              color={colors.white}
-              cursor="pointer"
-            />
+            <Link to="/projects">
+              <GenericButton
+                name={"See Projects"}
+                icon={<BsArrowRight size={25} />}
+                buttonHeight="54px"
+                borderRadius="20px"
+                fontFamily="Roboto"
+                fontStyle="normal"
+                fontWeight=" 600"
+                fontSize="15px"
+                lineHeight="22px"
+                backgroundColor={colors.blue}
+                color={colors.white}
+                cursor="pointer"
+              />
+            </Link>
+
             <GenericButton
               name="Download Resume"
               buttonHeight="54px"

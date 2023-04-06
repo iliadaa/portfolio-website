@@ -78,8 +78,8 @@ function Navbar() {
               </NavLink>
             </MenuLink>
             <MenuLink>
-              <NavLink aria-current="page" className="active">
-                Content
+              <NavLink to="/contacts" aria-current="page" className="active">
+                Contacts
               </NavLink>
             </MenuLink>
             <MenuLink>
