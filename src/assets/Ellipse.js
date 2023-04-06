@@ -10,13 +10,23 @@ const Ellipse = styled.div`
   background-size: cover;
   background-image: url(${(props) => props.backgroundImage});
   background-color: ${(props) => props.background};
-  margin-top: ${(props) => props.margintop ?? "-8%"};
-  margin-left: ${(props) => props.marginLeft ?? "70%"};
-  margin: ${(props) => props.margin ?? "auto"};
+  left: ${(props) => props.left ?? "82%"};
+  bottom: ${(props) => props.bottom ?? "25%"};
+  top: ${(props) => props.top ?? ""};
+  position: relative;
 
-  @media (max-width: ${breakpoints.xxxl}) {
+  @media (max-width: ${breakpoints.lg}) {
+    left: 80%;
+    bottom: 23%;
   }
-  @media (max-width: ${breakpoints.xxl}) {
+
+  @media (max-width: ${breakpoints.md}) {
+    left: 65%;
+    bottom: 27%;
+  }
+  @media (max-width: ${breakpoints.md}) {
+    left: 55%;
+    bottom: 30%;
   }
 `;
 

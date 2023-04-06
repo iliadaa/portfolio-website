@@ -15,11 +15,9 @@ export const CardLayout = styled.div`
   backdrop-filter: blur(10px);
   border-radius: 200px 0px;
   margin: auto;
-  margin-top: 6%;
   margin-bottom: 4%;
   gap: 5%;
   @media (max-width: ${breakpoints.xxl}) {
-    margin-top: 8%;
     width: 90%;
   }
 
@@ -34,10 +32,14 @@ export const CardLayout = styled.div`
     border-radius: 200px 0px 0;
     gap: 0;
   }
-  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+  @media screen and (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
     flex-direction: column;
-    height: 80%;
+    height: 75%;
     gap: 0;
+  }
+  @media screen and (max-width: ${breakpoints.xs}) {
+    border-radius: 200px 0px 0;
+    width: 100%;
   }
 `;
 
@@ -63,10 +65,6 @@ export const ImageContainer = styled.div`
     height: 260px;
     border: 15px solid #ffffff;
   }
-  /* @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-    width: 300px;
-    height: 300px;
-  } */
 `;
 
 export const ImageProfile = styled.img`
@@ -89,8 +87,8 @@ export const CardContent = styled.div`
     padding-left: 0;
   }
 
-  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.md}) {
-    width: 77%;
+  @media screen and (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.md}) {
+    width: 90%;
     padding-left: 0;
   }
   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
@@ -102,7 +100,7 @@ export const CardContent = styled.div`
 `;
 
 export const H2 = styled.h2`
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -126,7 +124,7 @@ export const H2 = styled.h2`
   }
 `;
 export const StyledParagraph = styled.p`
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -140,6 +138,8 @@ export const StyledParagraph = styled.p`
   }
   @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
     font-size: 22px;
+  }
+  @media (min-width: ${breakpoints.xxl}) {
     margin-bottom: 0;
   }
 `;
@@ -151,19 +151,8 @@ export const ButtonContainer = styled.div`
   @media (max-width: ${breakpoints.xs}) {
     width: inherit;
     gap: 5px;
-    padding-right: 13%;
   }
-
-  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.xl}) {
-    padding-top: 10%;
-    padding-right: 17%;
-  }
-  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-    padding-top: 0;
-    padding-right: 0;
-  }
-  @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-    padding-top: 0;
-    padding-right: 0;
+  @media (min-width: ${breakpoints.xxl}) {
+    padding-top: 5%;
   }
 `;

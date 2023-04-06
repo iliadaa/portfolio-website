@@ -11,24 +11,23 @@ export const NavBar = styled.nav`
 `;
 
 export const Container = styled.div`
-  padding: 20px;
+  padding: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   position: relative;
   z-index: 2;
-  top: 33px;
-  margin-right: 5%;
+  top: 0;
   @media (max-width: ${breakpoints.md}) {
-    top: 0;
-    margin-right: 0;
+    padding: 20px;
+    padding-bottom: 45px;
   }
 `;
 export const Logo = styled.div`
   color: ${colors.navColor};
   font-size: 26px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   margin-left: 5%;
 `;
 
@@ -55,22 +54,21 @@ export const UnorderedList = styled.ul`
   list-style: none;
   display: flex;
   margin: 0;
-  gap: 1rem;
   align-items: center;
   @media (max-width: ${breakpoints.md}) {
     display: flex;
     flex-direction: column;
-    margin-left: 17px;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 130px;
+    margin-left: 70px;
     align-items: flex-start;
+    gap: 30px;
   }
 `;
 export const MenuLink = styled.li`
   align-items: center;
   color: ${colors.navColor};
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 
   &:not(:last-child) {
     margin-right: 50px;

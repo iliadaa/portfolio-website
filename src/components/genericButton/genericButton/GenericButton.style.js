@@ -12,13 +12,13 @@ export const GenericButtonStyle = styled.button`
   border: ${colors.blue};
   border-radius: ${(props) => props.borderRadius};
   text-decoration: none;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
   font-style: normal;
   cursor: ${(props) => props.cursor};
-
+  width: 200px;
   @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxxl}) {
     width: 200px;
   }
