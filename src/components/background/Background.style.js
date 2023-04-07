@@ -7,31 +7,46 @@ export const BackgroundContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
     to right,
-    ${colors.LighBColor} 0%,
-    ${colors.DarkBColor} 100%
+    ${colors.BabyBlue} 30%,
+    ${colors.white} 30%
   );
   @media (max-width: ${breakpoints.md}) {
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       ${colors.LighBColor} 0%,
       ${colors.DarkBColor} 100%
+    ); */
+    background: linear-gradient(
+      to right,
+      ${colors.BabyBlue} 30%,
+      ${colors.white} 30%
     );
   }
   @media (max-width: ${breakpoints.xxl}) {
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       ${colors.LighBColor} 0%,
       ${colors.DarkBColor} 100%
+    ); */
+    background: linear-gradient(
+      to right,
+      ${colors.BabyBlue} 30%,
+      ${colors.white} 30%
     );
   }
   @media (max-width: ${breakpoints.xs}) {
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       ${colors.LighBColor} 0%,
       ${colors.DarkBColor} 100%
+    ); */
+    background: linear-gradient(
+      to right,
+      ${colors.BabyBlue} 30%,
+      ${colors.white} 30%
     );
   }
 `;

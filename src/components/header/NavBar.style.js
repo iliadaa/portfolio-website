@@ -20,8 +20,10 @@ export const Container = styled.div`
   z-index: 2;
   top: 0;
   @media (max-width: ${breakpoints.md}) {
-    padding: 20px;
+    padding: 35px;
     padding-bottom: 45px;
+    padding-right: 0;
+    padding-left: 0;
   }
 `;
 export const Logo = styled.div`

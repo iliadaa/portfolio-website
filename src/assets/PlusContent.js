@@ -25,6 +25,11 @@ const PlusIcon = styled.div`
     bottom: ${(props) => props.bottomMd};
     top: ${(props) => props.topMd};
   }
+  @media (max-width: ${breakpoints.xs}) {
+    left: ${(props) => props.leftXs};
+    bottom: ${(props) => props.bottomXs};
+    top: ${(props) => props.topXs};
+  }
 `;
 
 export default PlusIcon;

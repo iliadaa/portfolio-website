@@ -3,9 +3,9 @@ import { Route, Routes, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
-import ScrollToTopRoute from "./components/scrollToTop/ScrollToTopRoute";
 import Navbar from "./components/header/NavBar";
 import { BackgroundContainer } from "./components/background/Background.style";
+import Contact from "./pages/Contact";
 
 const DisplayNavbar = () => {
   return (
@@ -28,13 +28,11 @@ function App() {
           </BackgroundContainer>
         }
       />
-      {/* <Route element={<DisplayNavbar />}> */}
-      {/* <Route path="/projects" element={<Projects />} /> */}
-      <Route
-        path="/about"
-        element={<ScrollToTopRoute component={About} path="/about" />}
-      />
-      {/* </Route> */}
+      <Route element={<DisplayNavbar />}>
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contacts" element={<Contact />} />
+      </Route>
     </Routes>
   );
 }

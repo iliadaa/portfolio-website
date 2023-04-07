@@ -13,7 +13,7 @@ const Ellipse = styled.div`
   left: ${(props) => props.left ?? "82%"};
   bottom: ${(props) => props.bottom ?? "25%"};
   top: ${(props) => props.top ?? ""};
-  position: relative;
+  position: absolute;
 
   @media (max-width: ${breakpoints.lg}) {
     left: 80%;
@@ -27,6 +27,11 @@ const Ellipse = styled.div`
   @media (max-width: ${breakpoints.md}) {
     left: 55%;
     bottom: 30%;
+  }
+  @media (max-width: ${breakpoints.xs}) {
+    left: ${(props) => props.leftXs};
+    bottom: ${(props) => props.bottomXs};
+    top: ${(props) => props.topXs};
   }
 `;
 

@@ -15,7 +15,6 @@ export const CardLayout = styled.div`
   backdrop-filter: blur(10px);
   border-radius: 200px 0px;
   margin: auto;
-  margin-bottom: 4%;
   gap: 5%;
   @media (max-width: ${breakpoints.xxl}) {
     width: 90%;
@@ -23,13 +22,14 @@ export const CardLayout = styled.div`
 
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
+    width: 100%;
     height: 75%;
     background: linear-gradient(
       149.93deg,
       rgba(255, 255, 255, 0.5) 4.86%,
       rgba(0, 71, 255, 0.05) 120.1%
     );
-    border-radius: 200px 0px 0;
+    /* border-radius: 200px 0px 0; */
     gap: 0;
   }
   @media screen and (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
@@ -38,13 +38,17 @@ export const CardLayout = styled.div`
     gap: 0;
   }
   @media screen and (max-width: ${breakpoints.xs}) {
-    border-radius: 200px 0px 0;
+    /* border-radius: 200px 0px 0; */
     width: 100%;
+    height: 85%;
+  }
+  @media screen and (max-width: ${breakpoints.md}) {
+    margin-top: 2%;
   }
 `;
 
 export const ImageContainer = styled.div`
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   width: 401px;
   height: 401px;
   background: #2157f2;
@@ -149,7 +153,6 @@ export const ButtonContainer = styled.div`
   gap: 5%;
 
   @media (max-width: ${breakpoints.xs}) {
-    width: inherit;
     gap: 5px;
   }
   @media (min-width: ${breakpoints.xxl}) {

@@ -32,6 +32,10 @@ export const GenericButtonStyle = styled.button`
   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
     width: 200px;
   }
+  @media (max-width: ${breakpoints.xs}) {
+    width: 150px;
+    height: 45px;
+  }
 `;
 
 export const IconContainer = styled.div`
