@@ -19,9 +19,9 @@ function Home() {
         justifyContent="center"
         width="100%"
         sx={{
-          margin: "auto",
+          marginLeft: "8%",
           marginTop: "2%",
-          [`@media (max-width: ${breakpoints.lg})`]: {
+          [`@media (max-width: ${breakpoints.md})`]: {
             display: "none",
           },
         }}
